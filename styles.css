@@ -1,0 +1,144 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.left-column,
+.right-column {
+    padding: 20px;
+}
+
+.left-column {
+    background-color: white;
+    flex: 1 1 65%;
+}
+
+.right-column {
+    background-color: #007b8f;
+    color: white;
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.contact-info,
+.education,
+.languages {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #007b8f;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.experience,
+.projects,
+.skills {
+    margin-top: 20px;
+}
+
+.experience h3,
+.projects h3,
+.skills h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-info p,
+.education p,
+.languages p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.right-column h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.contact-info i,
+.languages i,
+.education i,
+.objective i {
+    margin-right: 8px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Add a separator line between each section */
+.left-column section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* Desktop Design */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .right-column {
+        width: 35%;
+        flex-basis: 35%;
+        display: block;
+    }
+
+    .left-column {
+        width: 65%;
+        flex-basis: 65%;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .right-column {
+        margin-bottom: 20px;
+    }
+}
